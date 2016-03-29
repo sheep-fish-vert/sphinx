@@ -1,3 +1,4 @@
+// footer
 .footer{ background-color: #cf3428; height: 200px;
     &:after{content: ''; position: absolute; bottom: 0; background-color: #a42a24; left: 0; right: 0; height: 5px; }
     .convert-big-foot{ display: block; 
@@ -36,6 +37,43 @@
         .logo{text-align: center; display: inline-block; width: 100%; padding-top: 35px;
             a{display: block; text-decoration: none;}
             p{padding-bottom:30px; padding-top: 40px; font-size: 22px; font-family: "Roboto", sans-serif; font-weight: 400; color: rgb(141, 33, 24); text-transform: uppercase; }
+        }
+    }
+}
+// /footer
+
+// form
+.contact-form{ position: relative; background-color: #282a2b; padding-bottom: 5px;  padding-top: 55px;
+    &:after{content: ''; position: absolute; bottom: 0; background-color: #212121; left: 0; right: 0; height: 5px; }
+    .conteiner-form{
+        .title-row{font-size: 50px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255);  text-transform: uppercase; font-weight: 500;padding-bottom: 22px;}
+        .subtitle-row{ max-width: 590px; font-size: 16px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255); line-height: 1.346;  padding-bottom: 13px;}
+        .form-block{ max-width: 710px;
+            .form-rover{width: 100%;  padding-top: 17px;
+            
+                ::-webkit-input-placeholder {color:white;}
+                :-moz-placeholder {color:white;}
+                ::-moz-placeholder {color:white;}
+                :-ms-input-placeholder {color:white;}
+                
+                .contact-form-item{ float: left; width: 33%;
+                    input{width: 192px; line-height: 26px; border: none; outline: none;color: white; background-color: transparent; font-size: 16px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255);  line-height: 24px; font-weight: 300; }
+                    p{font-size: 16px;  font-family: "Roboto", sans-serif; color: rgb(255, 255, 255);  line-height: 24px;  font-weight: 300;}
+                    label{display: none !important;}
+                    b{display: none;font-size: 30px; line-height: 40px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255); font-weight: 300; }
+                    
+                    .white-input{border-bottom:1px solid white;}
+                    .red-input{border-bottom:1px solid #cf3428;}
+
+                }
+                textarea{height: 32px; border: none; outline: none; color: white; background-color: transparent; font-size: 16px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255);  line-height: 24px; resize: none; font-weight: 300; width: 100%; border-bottom:1px solid white;max-width:660px;  }
+            }
+            .rower-textarea{padding-top: 7px;}
+           .contact-row-submit{ padding: 38px 0;
+               button{width: 258px; line-height: 49px; text-align: center; border: 1px solid white; border-radius: 5px; background-color: transparent; color: white; font-size: 16px;   font-family: "Roboto", sans-serif;  cursor: pointer; transition: all 0.5s;
+                    &:hover{background-color: white; color: rgb(40, 42, 43);}
+               } 
+           }           
         }
     }
 }
