@@ -1,0 +1,19 @@
+/* header */
+
+    .header{position: fixed;left:0;top:0;bottom: 0;width: calc(((100% - 1920px)/2) + (1920px * 0.23));background-color: rgba(0, 0, 0, .6);z-index: 3;padding: 40px 40px 0 0;text-align: right;
+        .header-logo{margin-bottom: 30px;}
+        .header-nav{
+            li{margin-bottom:15px;
+                &:last-child{margin-bottom: 0;}
+                a{color:#fff;font-size: 18px;text-transform: uppercase;text-decoration: none;position: relative;padding-left:0;left:0;transition:padding-left 300ms ease 300ms, left 300ms ease 300ms;
+                    &:before{content:'';display: block;position: absolute;left:0;top:calc(50% - 7px);width: 0;height: 0;border-width: 7px 0 7px 10px;border-style:solid;border-color: transparent transparent transparent #ce4035;opacity: 0;transition:opacity 300ms ease;}
+                    &.fancy-link{color:#ce4035;}
+                    &:hover{left:20px;padding-left:20px;transition:padding-left 300ms ease, left 300ms ease;
+                        &:before{opacity:1;transition:opacity 300ms ease 150ms;}
+                    }
+                }
+            }
+        }
+    }
+
+/* /header */
