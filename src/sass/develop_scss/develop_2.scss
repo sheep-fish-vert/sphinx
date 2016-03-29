@@ -1,0 +1,41 @@
+.footer{ background-color: #cf3428; height: 200px;
+    &:after{content: ''; position: absolute; bottom: 0; background-color: #a42a24; left: 0; right: 0; height: 5px; }
+    .convert-big-foot{ display: block; 
+        .logo{float: left; height: 200px; display: flex; align-items: center;}
+        .left-descript{padding-left: 40px; float: left; height: 200px; display: flex; align-items: center;  
+            p, a{display: block; font-size: 16px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255);text-transform: uppercase; line-height: 1.346; text-decoration: none;}
+            a{position: relative; padding-top: 10px;
+                &:after{content: ''; position: absolute; bottom: 0; left: 0; right: 100%; height: 1px; background-color: white; transition: all 0.5s;}
+                &:hover{
+                    &:after{right: 0;}
+                }
+            }
+        } 
+        .right-descript{float: right; height: 200px; display: flex; align-items: center; 
+            .conteiner-block{ padding-right: 25px; border-right: 1px solid #aa2c23; }
+            .space-for-text, span, a{font-size: 16px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255); line-height: 1.346; text-decoration: none;}
+            .space-for-text{text-transform: uppercase;}
+            .convert-email{text-align: right;padding-top: 10px;}
+            a{position: relative; 
+                &:after{content: ''; position: absolute; bottom: 0; left: 0; right: 100%; height: 1px; background-color: white; transition: all 0.5s;}
+                &:hover{
+                    &:after{right: 0;}
+                }
+            }
+        }    
+    }
+    .convert-small-foot{display: none; padding-top: 47px;
+        .conteiner-toper{display: flex; justify-content: space-around; 
+            a{display: flex; align-items: center; justify-content: space-around; text-decoration: none; width: 128px; height: 128px; border: 3px solid white; border-radius: 50%; position: relative;
+                &:before{content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; border-radius: 50%; border: 1px solid white; transition: all 0.3s;}
+                &:hover{
+                    &:before{ top: -9px; left: -9px; right: -9px; bottom: -9px; }
+                }
+            }
+        }
+        .logo{text-align: center; display: inline-block; width: 100%; padding-top: 35px;
+            a{display: block; text-decoration: none;}
+            p{padding-bottom:30px; padding-top: 40px; font-size: 22px; font-family: "Roboto", sans-serif; font-weight: 400; color: rgb(141, 33, 24); text-transform: uppercase; }
+        }
+    }
+}

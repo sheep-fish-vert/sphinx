@@ -5,7 +5,7 @@
 
 }
 @media screen and (max-width: 1366px){
-
+    .footer .convert-big-foot .right-descript .conteiner-block {padding-right: 0px; border-right: 0px solid #aa2c23;}
 }
 @media screen and (max-width: 1280px){
 
@@ -17,10 +17,19 @@
 
 }
 @media screen and (max-width: 767px){
-
+    .footer .convert-big-foot .left-descript p, .footer .convert-big-foot .left-descript a, .footer .convert-big-foot .right-descript .space-for-text, .footer .convert-big-foot .right-descript span, .footer .convert-big-foot .right-descript a { font-size: 13px;}
 }
 @media screen and (max-width: 666px){
 
+}
+
+@media screen and (max-width: 640px){
+    .footer{ height: 440px;
+        .convert-big-foot{display: none;}
+        .convert-small-foot{display: block;
+            
+        }
+    }
 }
 @media screen and (max-width: 479px){
 
