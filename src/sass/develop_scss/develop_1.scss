@@ -2,13 +2,32 @@
 
     .header{position: fixed;left:0;top:0;bottom: 0;width: calc(((100% - 1920px)/2) + (1920px * 0.23));background-color: rgba(0, 0, 0, .6);z-index: 3;padding: 40px 40px 0 0;text-align: right;
         .header-logo{margin-bottom: 30px;}
+        .sendwich{position: fixed;right: 45px;top:80px;display: none;z-index: 1;
+            .sendwich-wrap{display: block;width: 52px;height: 40px;padding-top:16px;cursor:pointer;position: relative;
+                &:before, &:after{content: '';display: block;position: absolute;left:calc(50% - 26px);height: 8px;width: 52px;background-color: #fff;transform-origin:50% 50%;transition:top 300ms ease, transform 300ms ease, background-color 300ms ease;}
+                &:before{top:0;left:0px;}
+                &:after{bottom:0;left:0px;}
+                span{display: block;width: 100%;height: 8px;background-color: #fff;opacity:1;transition:background-color 300ms ease, opacity 300ms ease;}
+                &:hover{
+                    span{background-color:#cf3428;}
+                    &:before, &:after{background-color: #cf3428;}
+                }
+            }
+            &.active{
+                .sendwich-wrap{
+                    span{opacity: 0;}
+                    &:before{top:calc(50% - 4px);transform:rotate(45deg);}
+                    &:after{bottom:calc(50% - 4px);transform:rotate(-45deg);}
+                }
+            }
+        }
         .header-nav{
             li{margin-bottom:15px;
                 &:last-child{margin-bottom: 0;}
                 a{color:#fff;font-size: 18px;text-transform: uppercase;text-decoration: none;position: relative;padding-left:0;left:0;transition:padding-left 300ms ease 300ms, left 300ms ease 300ms;
                     &:before{content:'';display: block;position: absolute;left:0;top:calc(50% - 7px);width: 0;height: 0;border-width: 7px 0 7px 10px;border-style:solid;border-color: transparent transparent transparent #ce4035;opacity: 0;transition:opacity 300ms ease;}
                     &.fancy-link{color:#ce4035;}
-                    &:hover{left:20px;padding-left:20px;transition:padding-left 300ms ease, left 300ms ease;
+                    &:hover, &.active{left:20px;padding-left:20px;transition:padding-left 300ms ease, left 300ms ease;
                         &:before{opacity:1;transition:opacity 300ms ease 150ms;}
                     }
                 }

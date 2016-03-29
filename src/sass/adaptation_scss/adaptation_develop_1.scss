@@ -14,7 +14,16 @@
 
     /* header */
 
-        .header{display: none;}
+        .header{position: absolute;right: 0;top: 0;padding: 0;text-align: left;width: 0;
+            .header-logo{display: none;}
+            .sendwich{display:block;}
+            .header-nav{position:fixed;z-index:0;top:0;bottom: 0;right:-325px;max-width: 325px;width: 100%;padding: 155px 40px 0 40px;background-color: rgba(0, 0, 0, .6);transition:right 300ms ease;
+                ul{border-left: 1px solid #fff;
+                    li{padding-left:25px;}
+                }
+                &.active{right: 0;}
+            }
+        }
 
     /* /header */
 
