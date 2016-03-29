@@ -1,6 +1,100 @@
 <section class="contact-form">
     <div class="mbox">
         <div class="page-section">
+            <div class="conteiner-form">
+                <div class="title-row">
+                    <h2>ОФОРМЛЯЙТЕ ЗАЯВКУ ПРЯМО СЕЙЧАС</h2>
+                </div>
+                <div class="subtitle-row">
+                    <h5>Для офрмления заявки на обслуживание в нашем сервис центре необходимо заполнить форму ниже. Наш менеджер свяжется с вами в течении 1 часа.</h5>
+                </div>
+                <div class="form-block">
+                    <form action="ajax.php" name="zayavka-on-main" class="zayavka zayavka-on-main">
+                        <div class="contact-form-row cfix">
+                            <div class="form-rover cfix">
+                                <div class="contact-form-item">
+                                    <div class="contact-form-item-input form_row">
+                                        <div class="form_input">
+                                            <input type="text" class='red-input' name="contact_name" required="required" value="" placeholder="Имя">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-form-item">
+                                    <div class="contact-form-item-input form_row">
+                                        <div class="form_input">
+                                            <input type="email" class='white-input' name="contact_email" required="required"  value="" placeholder="e - mail">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-form-item">
+                                    <div class="contact-form-item-input form_row">
+                                        <div class="form_input">
+                                            <input type="text" class='red-input tel-mask' name="contact_tel" value="" required="required" placeholder="телефон" >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-rover cfix">
+                                <div class="contact-form-item">
+                                    <div class="contact-form-item-input form_row">
+                                        <div class="form_input">
+                                            <input type="text" class='red-input' name="auto" required="required" value="" placeholder="Авто">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-form-item">
+                                    <div class="contact-form-item-input form_row">
+                                        <div class="form_input">
+                                            <input type="text" class='red-input' name="model" required="required" value="" placeholder="модель"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-form-item">
+                                    <div class="contact-form-item-input form_row">
+                                        <div class="form_input">
+                                            <input type="text" class='white-input' name="nomer" value="" required="required" placeholder="номер"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-rover cfix">
+                                <div class="contact-form-item">
+                                    <div class="contact-form-item-input form_row">
+                                        <div class="form_input">
+                                            <p>Желаемая дата посещения</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-form-item">
+                                    <div class="contact-form-item-input form_row">
+                                        <div class="form_input">
+                                            <input input type="text" class='red-input ll-skin-siena' id="datepicker" name="date" required="required" value="" placeholder="Дата"/>
+                                            <b class="selectdate">Желаемая дата посещения</b>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-form-item">
+                                    <div class="contact-form-item-input form_row">
+                                        <div class="form_input">
+                                            <input type="text" class='white-input' name="time" value="" required="required" placeholder="Время"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-rover rower-textarea cfix">
+                                <textarea name="comment" class='white-input' placeholder="Комментарий" ></textarea>
+                            </div>                    
+                        </div>
+                        <div class="contact-form-row contact-row-submit  cfix">
+                            <div class="contact-form-item">
+                                <button type="submit" class="contact-submit">
+                                    <span>ОТПРАВИТЬ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
         </div>
     </div>
