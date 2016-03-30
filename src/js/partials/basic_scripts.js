@@ -36,6 +36,10 @@ function oneHeightItems(){
     }
 
     oneHeight($('.oneHeight'));
+
+    $('.main-one-height .item-col-text').each(function() {
+        oneHeight($(this));
+    });
 }
 
 /*scroll animation*/
@@ -141,7 +145,7 @@ function changeViewport(){
 
 /* DOCUMENT READY  */
 $(document).ready(function() {
-    //oneHeightItems();
+    oneHeightItems();
     $('.footer_placeholder').height($('.footer').outerHeight());
 
     //goTo();
