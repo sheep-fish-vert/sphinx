@@ -29,6 +29,23 @@
 
     /* /header */
 
+    /* index-first-block */
+
+        .index-first-block{
+            .page-section{
+                .index-first-top{justify-content:flex-start;
+                    .index-logo{display: block;}
+                    .sertification-info{display: none;}
+                }
+                .index-first-main{
+                    .button-wrap{margin-bottom: 65px;}
+                    .sertification-info{display: block;}
+                }
+            }
+        }
+
+    /* /index-first-block */
+
 }
 @media screen and (max-width: 1280px){
 
