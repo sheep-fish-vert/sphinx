@@ -35,6 +35,9 @@
             .splash-right{width: 50%;}
         } 
     }
+    .team-second .page-section .conteiner-worker { padding:0 30px;
+        .single-worker { width: 42%;}
+    }
 }
 
 @media screen and (max-width: 789px){
@@ -130,10 +133,15 @@
     }
     .tool-second.tools .page-section .conteiner{padding-top: 75px; }
     
+    .team-second .page-section .conteiner-worker { padding:0;
+        .single-worker { width: 100%;
+            .naming{ padding-top: 19px;
+                p{ font-size: 30px; line-height: 1.233;}
+                i{font-size: 25px; line-height: 1.48;}
+            }
+        }
+    }
 }
-
-
-
 
 @media screen and (max-width: 479px){
 
