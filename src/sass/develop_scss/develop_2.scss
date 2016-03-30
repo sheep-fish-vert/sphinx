@@ -159,17 +159,47 @@
             }
       }
 }
-.tool-second{background-color: #cf3428;
-    &:after{background-color: #aa2c23;}
+
+    .tool-second{background-color: #cf3428;
+        &:after{background-color: #aa2c23;}
+    }
+    .tool-third{background-color: #282a2b;
+        &:after{background-color: #000000;}
+    }
+    .tool-fourth{background-color: #d1d1d1;
+        &:after{background-color: #9f9f9f;}
+        .page-section .conteiner .splash-left{
+            h3 { color: #656565; }
+            p { color: #656565; }
+        } 
+    }
+// end tools
+
+// team second block
+.team-second{ padding-bottom: 60px;
+    .page-section{
+        .conteiner-worker{ display: flex; flex-wrap:wrap; justify-content: space-between; align-items: baseline;
+            .single-worker{ width: 31%; padding-top: 50px;
+                .faceman{width: 100%;
+                    img{width: 100%; height: auto;}
+                }
+                .naming{ padding-top: 19px;
+                    p{ font-size: 18px; font-family: "Roboto", sans-serif; color: rgb(40, 42, 43); line-height: 21px;}
+                    i{font-size: 16px; font-family: "Roboto", sans-serif; color: rgb(40, 42, 43);  font-style: italic; font-weight: 300;  line-height: 18px;;}
+                }
+            }
+        }
+    }
 }
-.tool-third{background-color: #282a2b;
-    &:after{background-color: #000000;}
-}
-.tool-fourth{background-color: #d1d1d1;
-    &:after{background-color: #9f9f9f;}
-    .page-section .conteiner .splash-left{
-        h3 { color: #656565; }
-        p { color: #656565; }
-    } 
+
+// gallery second
+.gallery-second{padding-bottom: 60px;
+    .page-section{
+        .convert-galery{display: flex; flex-wrap:wrap; justify-content: space-between; align-items: baseline;
+            .gal-item{width: 31%; padding-top: 50px;
+                a{display: block; text-decoration: none;}
+            }
+        }
+    }    
 }
 

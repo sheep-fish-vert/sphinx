@@ -21,7 +21,14 @@ try {
             firstDay: 1,
             isRTL: false
         });
-        
+
+        $("a.grouped_elements").fancybox({
+            'transitionIn'	:	'elastic',
+            'transitionOut'	:	'elastic',
+            'speedIn'		:	600, 
+            'speedOut'		:	200, 
+            'overlayShow'	:	false
+        });
         
 
         $('input#datepicker').on('change', function() { $('.selectdate').css('display', 'none'); });
