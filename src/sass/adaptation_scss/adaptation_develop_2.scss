@@ -52,11 +52,12 @@
     }
     .items-share .items-wrap .row-item { padding-bottom: 0; border: none;
         .convert-item{width: 100% !important; margin: 0 !important;
-            .item {
+            .item { float: none; max-width: none; width: 100%; margin-bottom: 38px;
                 .title-item{font-size: 50px; color: #282a2b;}
-                .after-text{font-size: 30px; color: #282a2b;}
+                .after-text{font-size: 30px; color: #282a2b;padding-bottom: 66px; line-height: 37px;}
+                .image-conteiner { margin-bottom: 25px; height: 175px;}
                 a.go-button { right: 28px; font-size: 30px;
-                    &:after { width: 25px; height: 25px; bottom: 13px;}
+                    &:after { width: 20px; height: 20px; bottom: 14px; right: -10px;}
                 }
             }
         }
