@@ -5,7 +5,82 @@
 
 }
 @media screen and (max-width: 1366px){
+    /*main many pages*/
+    $red:#cf3428;
+    .btn{}
+    //2-------------------
+    .index-second-block{
+        .col-1{
+            .item-col-image{
+                img{}
+            }
+        }
+    }
+    //3-------------------
+    .index-third-block{
+        .item-col,.item-col-text{}
+        .item-col-image{}
+    }
+    //4------------------
+    .index-fourth-block{
+        .col-1{
+            .item-col-image{
+                img{}
+            }
+            .item-col-title{
+                &:after{}
+            }
+        }
+        .item-col-image{}
+    }
+    //5---------------
+    .index-fifth-block{
+        .col-1{
+            .item-col-image{
+                img{}
+            }
+        }
+        .col-2{
+            .item-col-title{}
+        }
+        .item-col-image{}
+    }
+    //6------------
+    .index-sixth-block{
+        .col-1{
+            .item-col-image{
+                img{}
+            }
+        }
+        .item-col,.item-col-text{}
+        .item-col-image{}
+        .col-1{
+            .item-col-title{
+                &:after{}
+            }
+        }
+        .item-col-image{}
+    }
+    /* ------------------------------------------------------------------ */
 
+    .main-one-height{
+        .item-col{
+            &.col-1{
+                .item-col-title{
+                    &:after{}
+                }
+            }
+        }
+        .item-col-title{
+            span{}
+        }
+        .item-col-image{
+            img{}
+        }
+        .item-col-text{}
+        .item-col-button{}
+    }
+    /*/main many pages*/
 }
 @media screen and (max-width: 1280px){
 

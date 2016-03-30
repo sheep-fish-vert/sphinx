@@ -37,8 +37,9 @@ function oneHeightItems(){
 
     oneHeight($('.oneHeight'));
 
-    $('.main-one-height .item-col-text').each(function() {
-        oneHeight($(this));
+    $('.main-one-height').each(function() {
+        var that = $(this).find('.item-col-text');
+        oneHeight(that);
     });
 }
 
