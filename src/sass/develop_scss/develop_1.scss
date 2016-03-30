@@ -4,10 +4,10 @@
         .header-logo{margin-bottom: 30px;}
         .sendwich{position: fixed;right: 45px;top:80px;display: none;z-index: 1;
             .sendwich-wrap{display: block;width: 52px;height: 40px;padding-top:16px;cursor:pointer;position: relative;
-                &:before, &:after{content: '';display: block;position: absolute;left:calc(50% - 26px);height: 8px;width: 52px;background-color: #fff;transform-origin:50% 50%;transition:top 300ms ease, transform 300ms ease, background-color 300ms ease;}
+                &:before, &:after{content: '';display: block;position: absolute;left:calc(50% - 26px);height: 8px;width: 52px;background-color: #fff;transform-origin:50% 50%;box-shadow:0 0 3px 0 rgba(0,0,0,.6);transition:top 300ms ease, transform 300ms ease, background-color 300ms ease, box-shadow 300ms ease;}
                 &:before{top:0;left:0px;}
                 &:after{bottom:0;left:0px;}
-                span{display: block;width: 100%;height: 8px;background-color: #fff;opacity:1;transition:background-color 300ms ease, opacity 300ms ease;}
+                span{display: block;width: 100%;height: 8px;background-color: #fff;opacity:1;box-shadow:0 0 3px 0 rgba(0,0,0,.6);transition:background-color 300ms ease, opacity 300ms ease, box-shadow 300ms ease;}
                 &:hover{
                     span{background-color:#cf3428;}
                     &:before, &:after{background-color: #cf3428;}
@@ -15,7 +15,8 @@
             }
             &.active{
                 .sendwich-wrap{
-                    span{opacity: 0;}
+                    span{opacity: 0;box-shadow:none;}
+                    &:before, &:after{box-shadow:none;}
                     &:before{top:calc(50% - 4px);transform:rotate(45deg);}
                     &:after{bottom:calc(50% - 4px);transform:rotate(-45deg);}
                 }
@@ -72,8 +73,11 @@
             }
 
             .index-first-main{max-width: 900px;width: 100%;
-                .text-block{color:#fff;margin-bottom: 20px;
-                    h1{font-family:'Chupada', sans-serif;font-weight: 600;text-transform: uppercase;font-size: 150px;margin-bottom: 15px;}
+                .text-block-wrap, .text-block-main{max-height: 625px;}
+                .text-block-wrap{overflow: hidden;margin-bottom: 20px;}
+                .text-block-main{margin-right: -20px;overflow-y:scroll;}
+                .text-block{color:#fff;padding-right: 20px;
+                    h1{font-family:'Chupada', sans-serif;font-weight: 600;text-transform: uppercase;font-size: 150px;margin-bottom: 15px;letter-spacing: -1.75px;}
                     p{font-size: 22px;line-height: 26px;}
                 }
                 .sertification-info{border-width: 0 0 0 1px;display: none;
