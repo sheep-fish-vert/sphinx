@@ -36,3 +36,52 @@
     }
 
 /* /header */
+
+/* button */
+
+    .button{display: flex;cursor: pointer;border-radius: 5px;border:1px solid #b2372d;background-color: #b2372d;max-width: 260px;width: 100%;min-height: 55px;justify-content:center;align-items:center;padding: 5px 5px 5px 5px;font-size: 16px;text-transform: uppercase;color:#fff;text-decoration: none!important;transition:border-color 300ms ease, background-color 300ms ease, color 300ms ease;
+        &:hover{border-color:#d94438;background-color:#d94438;}
+    }
+
+/* /button */
+
+/* index-first-block */
+
+    .index-first-block{background-image:url(../images/index-first-block-bg.jpg);background-repeat: no-repeat;background-position: center top;background-size:cover;height: 1080px;
+        .mbox{height: 100%;}
+        .sertification-info{position: relative;padding: 15px 15px 5px 15px;border-color:#b2372d;border-style:solid;
+            &:before{content:'';display: block;position:absolute;top:0;height: 1px;width: 163px;background-color: #b2372d;}
+            p{color:#fff;font-weight: 500;font-style:italic;font-size: 18px;margin-bottom: 7px;
+                &:last-child{margin-bottom: 0;}
+                span{text-transform: uppercase;}
+                a{color:#fff;text-decoration: none;position: relative;
+                    &:after{content:'';display: block;position: absolute;left:0;top:100%;height: 1px;width: 0;background-color: #fff;transition:width 300ms ease;}
+                    &:hover{
+                        &:after{width: 100%;}
+                    }
+                }
+            }
+        }
+        .page-section{display: flex;align-items:center;justify-content:flex-start;align-items:center;padding-top: 130px;position:relative;height: 100%;
+
+            .index-first-top{display: block;position: absolute;top:0;left:0;right:0;display: flex;justify-content:flex-end;align-items:flex-start;padding-top: 40px;
+                .index-logo{display: none;}
+                .sertification-info{text-align: right;border-width: 0 1px 0 0;
+                    &:before{right: 0;}
+                }
+            }
+
+            .index-first-main{max-width: 900px;width: 100%;
+                .text-block{color:#fff;margin-bottom: 20px;
+                    h1{font-family:'Chupada', sans-serif;font-weight: 600;text-transform: uppercase;font-size: 150px;margin-bottom: 15px;}
+                    p{font-size: 22px;line-height: 26px;}
+                }
+                .sertification-info{border-width: 0 0 0 1px;display: none;
+                    &:before{left:0;}
+                }
+            }
+
+        }
+    }
+
+/* index-first-block */

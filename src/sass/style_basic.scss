@@ -39,7 +39,9 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 }
 @media screen and (max-width: 640px){
 
-    .mbox{padding: 0 70px;}
+    .wrapper-main{
+        .mbox{padding: 0 70px;}
+    }
 
 }
 
