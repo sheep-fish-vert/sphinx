@@ -145,5 +145,31 @@
     100%   {right: 0;}
 }
 
+// tool stuff
 
+.tools{ position: relative; padding-bottom: 5px;
+    &:after{content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 5px; }  
+      .page-section{margin-right: -40px; width: calc(78% + 40px);
+            .conteiner{display: table; width: 100%; min-height: 280px;
+                .splash-left{display: table-cell; width: 42%; vertical-align: middle;
+                    h3{font-size: 50px; font-family: "Roboto", sans-serif; color: rgb(254, 254, 254);  text-transform: uppercase; font-weight: 500; max-width: 480px; padding-bottom: 18px;}
+                    p{max-width: 480px;font-size: 16px; font-family: "Roboto", sans-serif; color: rgb(254, 254, 254); line-height: 1.346; }
+                }
+                .splash-right{display: table-cell;width: 58%; vertical-align: middle; }
+            }
+      }
+}
+.tool-second{background-color: #cf3428;
+    &:after{background-color: #aa2c23;}
+}
+.tool-third{background-color: #282a2b;
+    &:after{background-color: #000000;}
+}
+.tool-fourth{background-color: #d1d1d1;
+    &:after{background-color: #9f9f9f;}
+    .page-section .conteiner .splash-left{
+        h3 { color: #656565; }
+        p { color: #656565; }
+    } 
+}
 
