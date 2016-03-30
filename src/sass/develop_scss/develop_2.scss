@@ -12,7 +12,7 @@
                 }
             }
         } 
-        .right-descript{float: right; height: 200px; display: flex; align-items: center; 
+        .right-descript{float: right; max-width: 325px; height: 200px; display: flex; align-items: center; 
             .conteiner-block{ padding-right: 25px; border-right: 1px solid #aa2c23; }
             .space-for-text, span, a{font-size: 16px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255); line-height: 1.346; text-decoration: none;}
             .space-for-text{text-transform: uppercase;}
@@ -55,6 +55,13 @@
                 :-moz-placeholder {color:white;}
                 ::-moz-placeholder {color:white;}
                 :-ms-input-placeholder {color:white;}
+                .error{
+                    input{color: #cf3428; font-weight: 700; }
+                    ::-webkit-input-placeholder {color:#cf3428; font-weight: 700;}
+                    :-moz-placeholder {color:#cf3428; font-weight: 700;}
+                    ::-moz-placeholder {color:#cf3428; font-weight: 700;}
+                    :-ms-input-placeholder {color:#cf3428; font-weight: 700;}
+                }
                 
                 .contact-form-item{ float: left; width: 33%;
                     input{width: 192px; line-height: 26px; border: none; outline: none;color: white; background-color: transparent; font-size: 16px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255);  line-height: 24px; font-weight: 300; }
@@ -77,3 +84,66 @@
         }
     }
 }
+.contacts-form-white{background-color: #ffffff;
+    &:after{display: none;}
+    .conteiner-form {
+        .title-row {color: #656565;}
+        .subtitle-row {color: #656565;}
+        .form-block {
+            .form-rover .contact-form-item {
+                p, input {color: #656565;}
+                .white-input{border-bottom: 1px solid #656565;}
+                ::-webkit-input-placeholder {color: #656565;}
+                :-moz-placeholder {color: #656565;}
+                ::-moz-placeholder {color: #656565;}
+                :-ms-input-placeholder {color: #656565;}
+                b{color: #656565;}
+                .error{
+                    input{color: #cf3428; font-weight: 700; }
+                    ::-webkit-input-placeholder {color:#cf3428; font-weight: 700;}
+                    :-moz-placeholder {color:#cf3428; font-weight: 700;}
+                    ::-moz-placeholder {color:#cf3428; font-weight: 700;}
+                    :-ms-input-placeholder {color:#cf3428; font-weight: 700;}
+                    b.selectdate{color:#cf3428; font-weight: 700;}
+                }
+            }
+            .contact-row-submit button {border: 1px solid #656565; color: #656565; 
+                &:hover{color: white; background-color: #cf3428; border: 1px solid #cf3428;}
+            }
+        }
+    }
+    
+}
+
+// share akcii
+.items-share{ background-color: white;
+    .items-wrap{ padding-top: 15px;padding-bottom: 70px;
+        .row-item{ width: 100%; padding-bottom: 36px; border-bottom: 1px solid #efefef;
+            .convert-item{width: 45%; margin-right: 5%;  padding-top: 48px; float: left;}
+            .item{ position: relative;  max-width: 500px; 
+                .title-item{font-size: 30px; font-family: "Roboto", sans-serif; color: rgb(40, 42, 43);  text-transform: uppercase; font-weight: 500; padding-bottom: 25px;}
+                
+                .image-conteiner{margin-bottom: 22px; height: 125px; width: 100%; position: relative;
+                    img{ width: 100%; height: 100%;}
+                }
+                
+                .after-text{font-size: 16px; font-family: "Roboto", sans-serif; color: rgb(40, 42, 43);  line-height: 1.346; font-weight: 400; padding-bottom: 45px;}
+                a.go-button { position: absolute;  bottom: 0; right: 12px; font-size: 14px; font-family: "Roboto", sans-serif;  color: rgb(180, 180, 180);  text-transform: uppercase; line-height: 1.539; font-weight: 400; text-decoration: none; padding-right: 20px;
+                    &:after{content: ''; position: absolute; width: 10px; height: 10px; border-top: 1px solid rgb(180, 180, 180); border-right: 1px solid rgb(180, 180, 180); transform: rotate(45deg); right: 0; bottom:6px; transition: all 0.5s;}
+                    &:hover{
+                        &:after{animation: arrowMove2 0.5s ease-out infinite;}
+                    }
+                }                  
+            }
+        }
+    }
+}
+
+@keyframes arrowMove2 {
+    0%  {right: 0;}
+    50% {right: 8px;}
+    100%   {right: 0;}
+}
+
+
+

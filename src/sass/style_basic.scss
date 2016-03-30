@@ -31,14 +31,17 @@ img{vertical-align:bottom;border:0;max-width:100%;}
     .page-section{width: 100%;margin-left:0;padding-left: 0;}
 
 }
-@media screen and (max-width: 1024px){
+
+@media screen and (max-width: 1280px){
 
     .mbox{padding: 0 40px;}
 
 }
 @media screen and (max-width: 640px){
 
-    .mbox{padding: 0 70px;}
+    .wrapper-main{
+        .mbox{padding: 0 70px;}
+    }
 
 }
 

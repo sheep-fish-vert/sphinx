@@ -4,10 +4,10 @@
         .header-logo{margin-bottom: 30px;}
         .sendwich{position: fixed;right: 45px;top:80px;display: none;z-index: 1;
             .sendwich-wrap{display: block;width: 52px;height: 40px;padding-top:16px;cursor:pointer;position: relative;
-                &:before, &:after{content: '';display: block;position: absolute;left:calc(50% - 26px);height: 8px;width: 52px;background-color: #fff;transform-origin:50% 50%;transition:top 300ms ease, transform 300ms ease, background-color 300ms ease;}
+                &:before, &:after{content: '';display: block;position: absolute;left:calc(50% - 26px);height: 8px;width: 52px;background-color: #fff;transform-origin:50% 50%;box-shadow:0 0 3px 0 rgba(0,0,0,.6);transition:top 300ms ease, transform 300ms ease, background-color 300ms ease, box-shadow 300ms ease;}
                 &:before{top:0;left:0px;}
                 &:after{bottom:0;left:0px;}
-                span{display: block;width: 100%;height: 8px;background-color: #fff;opacity:1;transition:background-color 300ms ease, opacity 300ms ease;}
+                span{display: block;width: 100%;height: 8px;background-color: #fff;opacity:1;box-shadow:0 0 3px 0 rgba(0,0,0,.6);transition:background-color 300ms ease, opacity 300ms ease, box-shadow 300ms ease;}
                 &:hover{
                     span{background-color:#cf3428;}
                     &:before, &:after{background-color: #cf3428;}
@@ -15,7 +15,8 @@
             }
             &.active{
                 .sendwich-wrap{
-                    span{opacity: 0;}
+                    span{opacity: 0;box-shadow:none;}
+                    &:before, &:after{box-shadow:none;}
                     &:before{top:calc(50% - 4px);transform:rotate(45deg);}
                     &:after{bottom:calc(50% - 4px);transform:rotate(-45deg);}
                 }
@@ -36,3 +37,55 @@
     }
 
 /* /header */
+
+/* button */
+
+    .button{display: flex;cursor: pointer;border-radius: 5px;border:1px solid #b2372d;background-color: #b2372d;max-width: 260px;width: 100%;min-height: 55px;justify-content:center;align-items:center;padding: 5px 5px 5px 5px;font-size: 16px;text-transform: uppercase;color:#fff;text-decoration: none!important;transition:border-color 300ms ease, background-color 300ms ease, color 300ms ease;
+        &:hover{border-color:#d94438;background-color:#d94438;}
+    }
+
+/* /button */
+
+/* index-first-block */
+
+    .index-first-block{background-image:url(../images/index-first-block-bg.jpg);background-repeat: no-repeat;background-position: center top;background-size:cover;height: 1080px;
+        .mbox{height: 100%;}
+        .sertification-info{position: relative;padding: 15px 15px 5px 15px;border-color:#b2372d;border-style:solid;
+            &:before{content:'';display: block;position:absolute;top:0;height: 1px;width: 163px;background-color: #b2372d;}
+            p{color:#fff;font-weight: 500;font-style:italic;font-size: 18px;margin-bottom: 7px;
+                &:last-child{margin-bottom: 0;}
+                span{text-transform: uppercase;}
+                a{color:#fff;text-decoration: none;position: relative;
+                    &:after{content:'';display: block;position: absolute;left:0;top:100%;height: 1px;width: 0;background-color: #fff;transition:width 300ms ease;}
+                    &:hover{
+                        &:after{width: 100%;}
+                    }
+                }
+            }
+        }
+        .page-section{display: flex;align-items:center;justify-content:flex-start;align-items:center;padding-top: 130px;position:relative;height: 100%;
+
+            .index-first-top{display: block;position: absolute;top:0;left:0;right:0;display: flex;justify-content:flex-end;align-items:flex-start;padding-top: 40px;
+                .index-logo{display: none;}
+                .sertification-info{text-align: right;border-width: 0 1px 0 0;
+                    &:before{right: 0;}
+                }
+            }
+
+            .index-first-main{max-width: 900px;width: 100%;
+                .text-block-wrap, .text-block-main{max-height: 625px;}
+                .text-block-wrap{overflow: hidden;margin-bottom: 20px;}
+                .text-block-main{margin-right: -20px;overflow-y:scroll;}
+                .text-block{color:#fff;padding-right: 20px;
+                    h1{font-family:'Chupada', sans-serif;font-weight: 600;text-transform: uppercase;font-size: 150px;margin-bottom: 15px;letter-spacing: -1.75px;}
+                    p{font-size: 22px;line-height: 26px;}
+                }
+                .sertification-info{border-width: 0 0 0 1px;display: none;
+                    &:before{left:0;}
+                }
+            }
+
+        }
+    }
+
+/* index-first-block */
