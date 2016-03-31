@@ -10,10 +10,10 @@
         }
     }
     .index-contact,.index-contact-bottom{min-height: 100vh;max-height: 1080px;}
-    .index-main>section{min-height: 900px;}
+    /*.index-main>section{min-height: 100%;}*/
 }
 @media screen and (min-width: 1367px){
-    .index-second-block,.index-third-block,.index-fourth-block,.index-fifth-block,.index-sixth-block{padding-top: 15px;padding-bottom: 15px;}
+    .index-second-block,.index-third-block,.index-fourth-block,.index-fifth-block,.index-sixth-block{padding-top: 30px;padding-bottom: 30px;}
 }
 @media screen and (max-width: 1600px){
 

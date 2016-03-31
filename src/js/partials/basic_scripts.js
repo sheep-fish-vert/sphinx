@@ -41,6 +41,8 @@ function oneHeightItems(){
             var that = $(this).find('.item-col-text');
             oneHeight(that);
         });
+    }else{
+        $('.main-one-height .item-col-text').removeAttr('style');
     }
 }
 
@@ -120,7 +122,7 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
-
+    oneHeightItems();
     $('.footer_placeholder').height($('.footer').outerHeight());
 });
 
