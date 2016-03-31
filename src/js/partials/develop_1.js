@@ -28,10 +28,40 @@ try{
         });
 
     }
+    // /header script
+
+    // share slider
+
+    function shareSlider(){
+
+        if($('.slider-main').length != 0){
+            $('.slider-main').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                dots:false
+            });
+        }
+
+        $(document).on('click','.top-block .slider-button',function(){
+            var parent = $(this).parents('.top-block-exlusive');
+            if($(this).is('.button-prev')){
+                parent.find('.slick-prev').click();
+            }else if($(this).is('.button-next')){
+                parent.find('.slick-next').click();
+            }
+        });
+
+    }
+
+    // /share slider
 
     $(document).ready(function(){
 
         headerScript();
+        shareSlider();
 
     });
 
