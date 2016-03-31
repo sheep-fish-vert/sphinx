@@ -1,8 +1,6 @@
 try {
     function googleMap(mapWrap){
         function initialize() {
-            
-
             var myLatlng = new google.maps.LatLng(cordX,cordY);
             var myOptions = {
                 zoom: 16,
@@ -22,7 +20,7 @@ try {
 
 
             /*маркер на svg*/
-            var SQUARE_PIN = 'M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z'
+            var SQUARE_PIN = 'M256,0C167.641,0,96,71.625,96,160c0,24.75,5.625,48.219,15.672,69.125C112.234,230.313,256,512,256,512l142.594-279.375  C409.719,210.844,416,186.156,416,160C416,71.625,344.375,0,256,0z M256,256c-53.016,0-96-43-96-96s42.984-96,96-96  c53,0,96,43,96,96S309,256,256,256z'
             //больше - http://map-icons.com/
             /*/маркер на svg*/
 
@@ -35,10 +33,11 @@ try {
                 //icon: image //  иконка картинкой
                 icon: {                               //маркер на svg
                     path: SQUARE_PIN,
-                    fillColor: '#fff',
-                    fillOpacity: 0.7,
+                    scale: 0.1,
+                    fillColor: '#FF3232',
+                    fillOpacity: 1,
                     strokeColor: '#FF3232',
-                    strokeWeight: 5
+                    strokeWeight: 1
                 },
             });
 
@@ -62,9 +61,6 @@ try {
         initialize();
     }
 
-
-    var cordX = 0;
-    var cordY = 0;
 
     $(document).ready(function() {
         
