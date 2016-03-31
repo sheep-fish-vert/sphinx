@@ -37,10 +37,12 @@ function oneHeightItems(){
 
     oneHeight($('.oneHeight'));
 
-    $('.main-one-height').each(function() {
-        var that = $(this).find('.item-col-text');
-        oneHeight(that);
-    });
+    if ( $(window).width() > 640 ){
+        $('.main-one-height').each(function() {
+            var that = $(this).find('.item-col-text');
+            oneHeight(that);
+        });
+    }
 }
 
 /*scroll animation*/
