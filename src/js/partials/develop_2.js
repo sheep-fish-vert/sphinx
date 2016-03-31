@@ -95,7 +95,7 @@ try {
 
         $('input#datepicker').on('change', function() { $('.selectdate').css('display', 'none'); });
 
-        if (!$('#formap').lenght) {
+        if ($('#formap').length) {
             googleMap('formap');
         };
         
