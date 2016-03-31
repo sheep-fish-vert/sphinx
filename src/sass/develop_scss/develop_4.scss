@@ -7,8 +7,10 @@ $red:#cf3428;
     &.btn-grey{border-color: #656565;color: #656565;
         &:hover{background-color: #656565;color: #d0d0d0;border-color: #656565;}
     }
-
 }
+.index-contact{min-height: 100vh;max-height: 1080px;}
+
+
 //2-------------------
 .index-second-block{background-color: $red;border-bottom: 5px solid #8c2b24;
     .col-1{
