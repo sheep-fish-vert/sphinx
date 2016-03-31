@@ -1,7 +1,6 @@
 try{
-
     function scrollMainPage(){
-        if( $(window).width() > 1366 && $(window).height() > 750){
+        function scroll(){
             jQuery.easing['jswing'] = jQuery.easing['swing'];
             jQuery.extend( jQuery.easing,
             {
@@ -40,6 +39,17 @@ try{
                 }
             });
         }
+
+
+
+        if( $(window).width() >= 1919 && $(window).height() > 750){
+            scroll();
+        }
+        $(window).resize(function(event) {
+            if( $(window).width() >= 1919 && $(window).height() > 750){
+                scroll();
+            }
+        });
     }
 
     $(document).ready(function(){
