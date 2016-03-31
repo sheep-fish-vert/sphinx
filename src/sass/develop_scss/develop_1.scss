@@ -116,6 +116,28 @@
 
 /* /tool-slider */
 
+/* team-first */
+
+    .team-first{background-image: url(../images/team-block-bg.jpg);background-repeat: no-repeat;background-position: center top;
+        .top-block{
+            .top-block-top{
+                .top-block-title{padding: 15px 30px 15px 30px;}
+            }
+        }
+    }
+
+/* /team-first */
+
+/* gallery-first */
+
+    .gallery-first{position: relative;overflow: hidden;
+        .slider-main{
+            &:before, &:after{display: none;}
+        }
+    }
+
+/* /gallery-first */
+
 /* top-block main */
 
     .slider-main{position: absolute;top:0;left: 0;right: 0;bottom: 0;margin-bottom: 0;
