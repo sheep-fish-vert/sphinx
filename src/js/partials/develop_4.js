@@ -6,7 +6,7 @@ try{
         jQuery.browser.opera = /opera/.test(navigator.userAgent.toLowerCase());
         jQuery.browser.msie = /msie/.test(navigator.userAgent.toLowerCase());
 
-        var scroller=jQuery.browser.webkit ? "body": "html";
+        var scroller='.index-main';
 
         function scroll(){
             jQuery.easing['jswing'] = jQuery.easing['swing'];
@@ -27,46 +27,66 @@ try{
                     return c/2*((t-=2)*t*t + 2) + b;
                 }
             });
-            $(window).scrollTop(0);
+
             var scrollPos = $(window).scrollTop(),
-                index = 0,
+                indx = 0,
                 sect = $('.index-main>section'),
                 timer = 0;
 
-            console.log('scrollPos ' , scrollPos +'||   index ' , index);
+            console.log('scrollPos ' , scrollPos +'||   indx ' , indx);
 
-/*            setTimeout(function({
+            // setTimeout(function(){
+            //     sect.each(function(){
+            //         var elemPos = $(this).offset().top;
+            //         var elemCont = elemPos + $(this).outerHeight();
 
-            }),200);*/
+            //         console.log('elemPos ' , elemPos);
+            //         if(elemCont >= scrollPos){
+            //             console.log('elemCont >= scrollPos ' , elemCont >= scrollPos);
+            //             $(this).addClass('active');
+            //             $(scroller).animate({top:+"-"+elemPos}, 0);
+            //             index = $('.index-main>section.active').index();
+            //             return false;
+            //         }
+            //     });
+            // },300);
+
+            sect.eq(indx).addClass('active');
+
 
             $(window).on('mousewheel DOMMouseScroll', function(event) {
 
                 if( timer == 1 ){
                     event.preventDefault();
                 }else{
-                    if( event.originalEvent.wheelDelta < 0 && index != (sect.length - 1) ){
-                        console.log('scroll down'+'||   index ' , index);
+                    if( event.originalEvent.wheelDelta < 0 && indx != (sect.length - 1) ){
+                        sect.removeClass('active');
+                        console.log('scroll down'+'||   indx ' , indx);
                         event.preventDefault();
                         timer = 1;
-                        index++;
+                        indx++;
+
                         $(scroller).animate({
-                            scrollTop: sect.eq(index).offset().top},
+                            top:"-"+sect.eq(indx).position().top},
                             900,
                             'easeOutCubic',
                             function() {
                                 timer = 0;
+                                sect.eq(indx).addClass('active');
                         });
-                    }else if( event.originalEvent.wheelDelta > 0 && index!=0 ){
-                        console.log('scroll up'+'||     index ' , index);
+                    }else if( event.originalEvent.wheelDelta > 0 && indx!=0 ){
+                        sect.removeClass('active');
+                        console.log('scroll up'+'||     index ' , indx);
                         event.preventDefault();
                         timer = 1;
-                        index--;
+                        indx--;
                         $(scroller).animate({
-                            scrollTop: sect.eq(index).offset().top},
+                            top:"-"+sect.eq(indx).position().top},
                             900,
                             'easeOutCubic',
                             function() {
                                 timer = 0;
+                                sect.eq(indx).addClass('active');
                         });
                     }
                 }
@@ -90,7 +110,10 @@ try{
     });
 
     $(window).load(function(){
-        scrollMainPage();
+        if ( $('.index-main').length ) {
+            scrollMainPage();
+        }
+
     });
 
     $(window).resize(function(){

@@ -9,7 +9,8 @@ $red:#cf3428;
     }
 }
 .index-contact{min-height: 100vh;max-height: 1080px;}
-
+.wrapper-main{overflow: hidden;height: 100vh;}
+.index-main{position: relative;}
 
 //2-------------------
 .index-second-block{background-color: $red;border-bottom: 5px solid #8c2b24;
