@@ -96,7 +96,9 @@
 
         .global-wrapper{padding-top: 174px;
             &.spec-header{
-                .header{position: fixed;background-color: rgba(0,0,0,.6);}
+                .header{position: fixed;background-color: rgba(0,0,0,.6);
+                    .header-nav{height: calc(100% - 174px);padding: 0 40px 0 0px;}
+                }
             }
             .main{margin-top: -175px;}
             .header{background-color: transparent;position: absolute;
@@ -166,6 +168,18 @@
         }
 
     /* /tool-slider */
+
+    /* team-first */
+
+        .team-first{background-size: auto 100%;
+            .top-block{
+                .top-block-top{
+                    .top-block-title{max-width: none;padding: 5px 15px;}
+                }
+            }
+        }
+
+    /* /team-first */
 
     /* top-block main */
 
