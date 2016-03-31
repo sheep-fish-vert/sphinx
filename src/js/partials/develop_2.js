@@ -63,7 +63,7 @@ try {
 
 
     $(document).ready(function() {
-        
+
         $("#datepicker").datepicker({
             minDate: 0,
             showOtherMonths: true,
@@ -87,11 +87,11 @@ try {
         $("a.grouped_elements").fancybox({
             'transitionIn'	:	'elastic',
             'transitionOut'	:	'elastic',
-            'speedIn'		:	600, 
-            'speedOut'		:	200, 
+            'speedIn'		:	600,
+            'speedOut'		:	200,
             'overlayShow'   :   false
         });
-        
+
 
         $('input#datepicker').on('change', function() { $('.selectdate').css('display', 'none'); });
 

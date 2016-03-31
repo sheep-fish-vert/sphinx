@@ -95,6 +95,27 @@
 
 /* /share-slider */
 
+/* tool-slider */
+
+    .tool-first{overflow: hidden;position: relative;
+        .slider-main{
+            &:before, &:after{display: none;}
+        }
+        .top-block{
+            .top-block-top{display: flex;justify-content:space-between;align-items:flex-start;
+                .top-block-title{padding: 15px 30px 15px 30px;}
+               .sertification-info{text-align: right;top:40px;border-width: 0 1px 0 0;
+                    &:before{right: 0;}
+               }
+            }
+            .top-block-main{
+                .top-block-slider-buttons{display: none;}
+            }
+        }
+    }
+
+/* /tool-slider */
+
 /* top-block main */
 
     .slider-main{position: absolute;top:0;left: 0;right: 0;bottom: 0;margin-bottom: 0;
@@ -102,16 +123,31 @@
         &:before{content:'';display: block;position: absolute;top:0;left:22%;width: 100%;height: 100%;background-image:url(../images/slider-shadow.png);background-repeat: repeat-y;z-index: 1;}
         &:after{content: '';display: block;position: absolute;left: 0;width: 22%;top:0;bottom: 0;background-color: rgba(0,0,0,.9);z-index: 0;}
         .slider-item{position: relative;overflow: hidden;
-            img{display: inline-block;position:relative;left:50%;max-width: none;max-height:100%;transform:translate(-50%, 0%);}
+            img{display: inline-block;position:relative;left:50%;max-width: none;min-width:100%;max-height:100%;transform:translate(-50%, 0%);}
         }
     }
 
     .top-block{height: 595px;position: relative;padding-top: 160px;display: flex;align-items:center;justify-content:flex-start;
+        &.page-section{padding-left: 0;}
         .top-block-top{position: absolute;top:0;width: 100%;display: flex;align-items:flex-end;justify-content:flex-start;
             .header-logo{display: none;}
-            .top-block-title{background-color: #b2372d;font-family:'Chupada', sans-serif;font-weight: 600;color:#fff;font-size: 45px;display: flex;justify-content:center;align-items:flex-end;min-height: 155px;min-width:170px;padding:15px 5px 35px 5px;}
+            .top-block-title{background-color: #b2372d;font-family:'Chupada', sans-serif;font-weight: 600;color:#fff;font-size: 45px;display: flex;justify-content:center;align-items:flex-end;min-height: 155px;min-width:170px;max-width: 220px;padding:15px 30px 35px 30px;}
+            .sertification-info{position: relative;padding: 15px 15px 5px 15px;border-color:#b2372d;border-style:solid;
+                &:before{content:'';display: block;position:absolute;top:0;height: 1px;width: 163px;background-color: #b2372d;}
+                p{color:#fff;font-weight: 500;font-style:italic;font-size: 18px;margin-bottom: 7px;
+                    &:last-child{margin-bottom: 0;}
+                    span{text-transform: uppercase;}
+                    a{color:#fff;text-decoration: none;position: relative;
+                        &:after{content:'';display: block;position: absolute;left:0;top:100%;height: 1px;width: 0;background-color: #fff;transition:width 300ms ease;}
+                        &:hover{
+                            &:after{width: 100%;}
+                        }
+                    }
+                }
+            }
         }
         .top-block-main{display: flex;flex-direction:row-reverse;justify-content:flex-start;align-items:flex-start;
+            .top-block-content{padding-left: 25px;}
             .top-block-text-wrap, .top-block-main-true{max-height: 315px;}
             .top-block-text-wrap{width: 100%;max-width:550px;overflow: hidden;margin-bottom: 25px;
                 .top-block-main-true{margin-right: -20px;overflow-x:hidden;overflow-y:scroll;
@@ -122,7 +158,7 @@
                 h1{font-weight: 500;font-size: 50px;color:#fff;text-transform: uppercase;margin-bottom: 15px;}
                 p{font-size: 16px;color:#fff;line-height: 22px;}
             }
-            .top-block-slider-buttons{display: flex;justify-content:flex-start;align-items:flex-start;padding-right: 25px;
+            .top-block-slider-buttons{display: flex;justify-content:flex-start;align-items:flex-start;
                 .slider-button{width: 85px;height: 100px;background-color:#b2372d;cursor: pointer;position:relative;transition:background-color 300ms ease;
                     &:hover{background-color: #9d2f26;}
                     &:before, &:after{content:'';display: block;position: absolute;height: 1px;width: 16px;background-color: #fff;left:calc(50% - 8px);transform-origin:50% 50%;}

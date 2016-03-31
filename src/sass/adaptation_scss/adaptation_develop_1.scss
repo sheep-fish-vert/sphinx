@@ -46,6 +46,22 @@
 
     /* /index-first-block */
 
+    /* tool-slider */
+
+        .tool-first{
+            .top-block{
+                .top-block-top{justify-content:flex-start;
+                    .header-logo{display: block;}
+                    .sertification-info{display: none;}
+                }
+                .top-block-main{
+                    .top-block-slider-buttons{display: flex;}
+                }
+            }
+        }
+
+    /* /tool-slider */
+
     /* top-block main */
 
         .slider-main{
