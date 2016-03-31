@@ -8,7 +8,6 @@ var scroller=jQuery.browser.webkit ? "body": "html";
 
 $.scrollbarWidth=function(){var a,b,c;if(c===undefined){a=$('<div style="width:50px;height:50px;overflow:auto"><div/></div>').appendTo('body');b=a.children();c=b.innerWidth()-b.height(99).innerWidth();a.remove()}return c};
 
-
 /* scrollUp */
 function scrollUp(block,targetBlock) {
 
@@ -43,38 +42,6 @@ function oneHeightItems(){
             oneHeight(that);
         });
     }
-}
-
-/*scroll animation*/
-function animationBlock(item){
-
-    $(window).scroll(function(){
-        checkForAnimate();
-    });
-
-    function checkForAnimate(){
-        var bottomCheck = $(window).height()+$(window).scrollTop();
-        var windowTop = $(window).scrollTop()+($(window).height()/1.5);
-        item.each(function(){
-           if(windowTop>$(this).offset().top || bottomCheck > $('body').height()*0.98){
-
-              var itemSect = $(this);
-              var point = 0;
-              itemSect.find('.animate-it').addClass('animated');
-
-              var timer = setInterval(function(){
-                 itemSect.find('.animate-delay').eq(point).addClass('animated');
-                 point++;
-                 if(itemSect.find('.animate-delay').length == point){
-                     clearInterval(timer);
-                 }
-              },200);
-
-
-           }
-        });
-    }
-    checkForAnimate();
 }
 
 /*GO TO href*/
@@ -150,9 +117,6 @@ function changeViewport(){
 $(document).ready(function() {
     oneHeightItems();
     $('.footer_placeholder').height($('.footer').outerHeight());
-
-    //goTo();
-    //animationBlock($('.setion-animate'));
 });
 
 $(window).resize(function() {

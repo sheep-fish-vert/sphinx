@@ -1,5 +1,6 @@
 /*main many pages*/
 $red:#cf3428;
+/*button*/
 .btn{width: 100%;max-width:258px;border-style: solid;border-width: 1px;border-color: rgb(255, 255, 255);border-radius: 5px;background-color: rgba(0, 0, 0, 0);height: 53px;display: flex;align-items: center;justify-content:center;text-align: center;text-decoration: none;color: white;background:transparent;transition:all ease .2s;
     &.btn-red{
         &:hover{background-color: #fff;color: $red;}
@@ -8,9 +9,20 @@ $red:#cf3428;
         &:hover{background-color: #656565;color: #d0d0d0;border-color: #656565;}
     }
 }
-.index-contact{min-height: 100vh;max-height: 1080px;}
-.wrapper-main{overflow: hidden;height: 100vh;}
-.index-main{position: relative;}
+/*/button*/
+
+/*some main style*/
+.index-second-block,.index-third-block,.index-fourth-block,.index-fifth-block,.index-sixth-block,.index-contact,.index-contact-bottom{overflow: hidden;}
+
+.index-main{position: relative;transition:top ease .3s;top: 0px;}
+
+.wrapper-main{
+    .footer{position: relative;}
+    .footer_placeholder{display: none;}
+}
+
+/*/some main style*/
+
 
 //2-------------------
 .index-second-block{background-color: $red;border-bottom: 5px solid #8c2b24;
