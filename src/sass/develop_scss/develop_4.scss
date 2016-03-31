@@ -52,14 +52,12 @@ $red:#cf3428;
         .item-col-image{justify-content:flex-start;
             img{margin-left: -20px;}
         }
-    }
-    .item-col,.item-col-text{color: #656565 !important;}
-    .item-col-image{min-height: 456px;}
-    .col-1{
         .item-col-title{margin-top: -46px;
             &:after{bottom: calc(100% - 9px) !important;}
         }
     }
+    .item-col,.item-col-text{color: #656565 !important;}
+    .item-col-image{min-height: 456px;}
     .item-col-image{min-height: 456px !important;}
 }
 /* ------------------------------------------------------------------ */
@@ -78,6 +76,7 @@ $red:#cf3428;
     .item-col-image{min-height: 450px;display: flex;align-items: center;justify-content:center;
         img{}
     }
+    .item-col-mobile-image{display: none;}
     .item-col-text{max-width: 490px;color: white;font-size: 16px;line-height: 22px;letter-spacing: -0.1px;margin-bottom: 29px;}
     .item-col-button{margin-bottom: 35px;}
 }
