@@ -205,6 +205,16 @@
             }
         } 
     }
+    .index-contact-top .page-section { height: auto;
+        .convert { padding-top: 50px;
+            .title-text { font-size: 40px;}
+            .subtitle{font-size: 30px;}
+        }
+        .contacts-tsble .side { min-width: 100%; width: 100%; margin-bottom: 40px;
+            p{font-size: 30px; line-height: 36px;}
+            a{font-size: 25px; line-height: 30px;}
+        }
+    }
 }
 
 @media screen and (max-width: 479px){
