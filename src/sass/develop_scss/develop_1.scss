@@ -1,6 +1,6 @@
 /* header */
 
-    .header{position: fixed;left:0;top:0;bottom: 0;width: calc(((100% - 1920px)/2) + (1920px * 0.23));background-color: rgba(0, 0, 0, .6);z-index: 3;padding: 40px 40px 0 0;text-align: right;
+    .header{position: fixed;left:0;top:0;bottom: 0;width: calc(((100% - 1920px)/2) + (1920px * 0.22));background-color: rgba(0, 0, 0, .6);z-index: 3;padding: 40px 40px 0 0;text-align: right;
         .header-logo{margin-bottom: 30px;}
         .sendwich{position: fixed;right: 45px;top:80px;display: none;z-index: 1;
             .sendwich-wrap{display: block;width: 52px;height: 40px;padding-top:16px;cursor:pointer;position: relative;
@@ -48,7 +48,7 @@
 
 /* index-first-block */
 
-    .index-first-block{background-image:url(../images/index-first-block-bg.jpg);background-repeat: no-repeat;background-position: center top;background-size:cover;height: 1080px;
+    .index-first-block{background-image:url(../images/index-first-block-bg.jpg);background-repeat: no-repeat;background-position: center top;background-size:cover;min-height: 100vh;max-height: 1080px;
         .mbox{height: 100%;}
         .sertification-info{position: relative;padding: 15px 15px 5px 15px;border-color:#b2372d;border-style:solid;
             &:before{content:'';display: block;position:absolute;top:0;height: 1px;width: 163px;background-color: #b2372d;}
