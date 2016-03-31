@@ -27,7 +27,7 @@ try {
             'transitionOut'	:	'elastic',
             'speedIn'		:	600, 
             'speedOut'		:	200, 
-            'overlayShow'	:	false
+            'overlayShow'   :   false
         });
         
 
