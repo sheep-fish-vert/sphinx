@@ -203,3 +203,54 @@
     }    
 }
 
+// contacts
+.contacts-first{ height: 660px; position: relative;
+    .index-first-top{margin-right: -13px;
+        .index-page{position: absolute; top: 0; left: -6px; width: 170px; height: 135px;  background-color: #cf3428; display: flex; align-items: flex-end; justify-content: center;
+            .conteiner{ text-align: center; font-size: 45px; font-weight: 600;  font-family: "Chupada", sans-serif;   color: rgb(255, 255, 255);  text-transform: uppercase; padding-bottom: 10px;}
+        }
+        .sertification-info { padding: 24px 26px 5px 15px;}    
+    }
+    .contacts-first-main{
+        .text-block-wrap{
+            .text-block-main{
+                .text-block{padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.2); max-width: 815px;
+                    h1{font-size: 50px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255);   text-transform: uppercase; font-weight: 500; padding-bottom: 15px;}
+                    p{font-size: 16px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255);   line-height: 1.346;}
+                }
+                .contacts-tsble{ padding-top: 30px;
+                    .side{ float: left; min-width: 313px; border-left: 1px solid #ffffff; padding-left: 30px; padding-left: 10px;
+                        p{font-size: 22px; font-family: "Roboto", sans-serif, sans-serif; color: rgb(255, 255, 255);  text-transform: uppercase; font-weight: 500; padding-bottom: 12px;}
+                        a{ font-size: 12px; font-family: "Roboto", sans-serif; color: rgb(255, 255, 255); font-style: italic; text-transform: uppercase; line-height: 1.167; text-decoration: none; position: relative;
+                            &:after {content: ''; position: absolute; left: 0;top: 100%;height: 1px;    right: 100%; background-color: #fff; transition: all 300ms ease;}
+                            &:hover{
+                                &:after{right: 0;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// contacts on main
+.index-contact-top{  background-color: white;
+    .contacts-tsble{ padding-top: 30px;
+        .side{ float: left; min-width: 215px; border-left: 1px solid #919191; padding-left: 30px; padding-left: 10px;
+            p{font-size: 16px; font-family: "Roboto", sans-serif, sans-serif; color: #282a2b;  text-transform: uppercase; font-weight: 500; padding-bottom: 10px;}
+            a{ font-size: 14px; font-family: "Roboto", sans-serif; color: #919191; font-style: italic; text-transform: uppercase; line-height: 14px; text-decoration: none; position: relative;
+                &:after {content: ''; position: absolute; left: 0;top: 100%;height: 1px;    right: 100%; background-color: #919191; transition: all 300ms ease;}
+                &:hover{
+                    &:after{right: 0;}
+                }
+            }
+        }
+    }
+    .page-section{height: 345px; display: flex; align-items: center; 
+        .convert{
+            .title-text{font-size: 50px; font-family: "Roboto", sans-serif; color: rgb(40, 42, 43);  text-transform: uppercase; font-weight: 500; max-width: 815px; padding-bottom: 17px; }
+            .subtitle{font-size: 16px; font-family: "Roboto", sans-serif; color: rgb(40, 42, 43);  line-height: 1.346; max-width: 815px; }
+        }
+    }
+}
