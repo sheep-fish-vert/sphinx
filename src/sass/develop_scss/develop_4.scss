@@ -7,8 +7,10 @@ $red:#cf3428;
     &.btn-grey{border-color: #656565;color: #656565;
         &:hover{background-color: #656565;color: #d0d0d0;border-color: #656565;}
     }
-
 }
+.index-contact{min-height: 100vh;max-height: 1080px;}
+
+
 //2-------------------
 .index-second-block{background-color: $red;border-bottom: 5px solid #8c2b24;
     .col-1{
@@ -76,6 +78,7 @@ $red:#cf3428;
     .item-col-image{min-height: 450px;display: flex;align-items: center;justify-content:center;
         img{}
     }
+    .item-col-mobile-image{display: none;}
     .item-col-text{max-width: 490px;color: white;font-size: 16px;line-height: 22px;letter-spacing: -0.1px;margin-bottom: 29px;}
     .item-col-button{margin-bottom: 35px;}
 }
