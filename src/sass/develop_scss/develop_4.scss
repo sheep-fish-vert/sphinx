@@ -52,14 +52,12 @@ $red:#cf3428;
         .item-col-image{justify-content:flex-start;
             img{margin-left: -20px;}
         }
-    }
-    .item-col,.item-col-text{color: #656565 !important;}
-    .item-col-image{min-height: 456px;}
-    .col-1{
         .item-col-title{margin-top: -46px;
             &:after{bottom: calc(100% - 9px) !important;}
         }
     }
+    .item-col,.item-col-text{color: #656565 !important;}
+    .item-col-image{min-height: 456px;}
     .item-col-image{min-height: 456px !important;}
 }
 /* ------------------------------------------------------------------ */
