@@ -62,6 +62,16 @@
 
     /* /tool-slider */
 
+    /* gallery-first */
+
+        .gallery-first{
+            .slider-main{
+                &:before{display: block;}
+            }
+        }
+
+    /* /gallery-first */
+
     /* top-block main */
 
         .slider-main{
