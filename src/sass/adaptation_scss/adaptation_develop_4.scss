@@ -10,7 +10,12 @@
         }
     }
     .index-contact,.index-contact-bottom{min-height: 100vh;max-height: 1080px;}
-    /*.index-main>section{min-height: 100%;}*/
+
+    /*fix for ie*/
+    .its-fcking-ie{
+        .main-one-height,.index-first-block{height: 100vh;max-height: auto;}
+        .index-main .index-contact,.index-contact, .index-contact-bottom{height: 100vh;max-height: auto;}
+    }
 }
 @media screen and (min-width: 1367px){
     .index-second-block,.index-third-block,.index-fourth-block,.index-fifth-block,.index-sixth-block{padding-top: 30px;padding-bottom: 30px;}

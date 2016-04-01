@@ -1,4 +1,6 @@
 /* helping adds*/
+::-moz-selection { background: #cf3428;color: white; }
+::selection { background: #cf3428;color: white; }
 
 .clear{clear:both;font-size:1px;line-height:1px;height:0;overflow:hidden;}
 .cfix:after{content: '';display: block;height: 0;font-size: 1px;line-height: 1px;overflow: hidden;clear: both;}

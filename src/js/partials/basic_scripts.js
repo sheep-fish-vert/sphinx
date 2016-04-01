@@ -11,13 +11,13 @@ $.scrollbarWidth=function(){var a,b,c;if(c===undefined){a=$('<div style="width:5
 /* scrollUp */
 function scrollUp(block,targetBlock) {
 
-    $(block).click(function(e){
+    $(block).click(function(event){
         var target = $(targetBlock).offset().top;
 
         $(scroller).animate({scrollTop:target},800);
         return false;
 
-        e.preventDefault();
+        event.preventDefault();
     });
 }
 

@@ -97,7 +97,7 @@
 
 /* tool-slider */
 
-    .tool-first{overflow: hidden;position: relative;
+    .tool-first{overflow: hidden;position: relative;background: black;
         .slider-main{
             &:before, &:after{display: none;}
         }

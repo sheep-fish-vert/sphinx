@@ -10,12 +10,14 @@ try{
                 timer = 0;
             sect.eq(indx).addClass('active');
 
-            $(window).on('mousewheel DOMMouseScroll', function(event) {
+            $(document).unbind('mousewheel DOMMouseScroll').on('mousewheel DOMMouseScroll', function(event) {
+                var delta = event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0 ? 1 : -1;
+
                 if( $(window).width() >= 1900 && $(window).height() > 750){
                     if( timer == 1 ){
                         event.preventDefault();
                     }else{
-                        if( event.originalEvent.wheelDelta < 0 && indx != (sect.length - 1) ){
+                        if( delta < 0 && indx != (sect.length - 1) ){
                             sect.removeClass('active');
                             event.preventDefault();
                             timer = 1;
@@ -26,9 +28,8 @@ try{
                                 sect.eq(indx).addClass('active');
                             } ,400)
 
-                        }else if( event.originalEvent.wheelDelta > 0 && indx!=0 ){
+                        }else if( delta > 0 && indx!=0 ){
                             sect.removeClass('active');
-
                             event.preventDefault();
                             timer = 1;
                             indx--;
@@ -42,7 +43,11 @@ try{
                 }
             });
 
-            $('.index-main .btn').on('click', function(event) {
+            $('.index-main .btn,.index-main .button').on('click', function(event) {
+                var count = 0
+                if($(window).width()<=641){
+                    count = 174
+                }
                 if( $(window).width() >= 1900 && $(window).height() > 750){
                     sect.removeClass('active');
                     var lastSect = sect.length - 1;
@@ -51,8 +56,8 @@ try{
                     sect.eq(lastSect).addClass('active');
                 }else{
                     event.preventDefault();
-                    $('body,html').animate({scrollTop:$('.index-contact-bottom').offset().top},800);
-                    return false;
+                    var contBottom = parseInt($('.index-contact-bottom').offset().top - count);
+                    $('body,html').animate({scrollTop:contBottom},800);
                 }
             });
         }
@@ -66,8 +71,13 @@ try{
         });
     }
 
+    function checkBrowser(){
+        if (bowser.msie) {
+          $('body').addClass('its-fcking-ie');
+        }
+    }
     $(document).ready(function(){
-
+        checkBrowser();
     });
 
     $(window).load(function(){
