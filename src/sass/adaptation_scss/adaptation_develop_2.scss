@@ -13,7 +13,7 @@
         .conteiner{
             .splash-left{width: 52%; }
             .splash-right{width: 48%;}
-        } 
+        }
     }
     .contacts-first .page-section {
         .index-first-top {
@@ -27,22 +27,22 @@
 
 }
 @media screen and (max-width: 1280px){
-    .tools .page-section { 
+    .tools .page-section {
         .conteiner{
             .splash-left{width: 57%;    padding-left: 35px; }
             .splash-right{width: 43%;}
-        } 
+        }
     }
 }
 @media screen and (max-width: 1024px){
     .contact-form .conteiner-form .title-row {font-size: 40px;}
 }
 @media screen and (max-width: 992px){
-    .tools .page-section { 
+    .tools .page-section {
         .conteiner{
             .splash-left{width: 50%;    padding-left: 14px; }
             .splash-right{width: 50%;}
-        } 
+        }
     }
     .team-second .page-section .conteiner-worker { padding:0 30px;
         .single-worker { width: 42%;}
@@ -52,7 +52,7 @@
             .convert-galery{
                 .gal-item{width: 46%; padding-top: 50px;}
             }
-        }    
+        }
     }
     .contacts-first .page-section {
         .index-first-top {
@@ -96,10 +96,10 @@
     .footer{ height: 440px;
         .convert-big-foot{display: none;}
         .convert-small-foot{display: block;
-            
+
         }
     }
-    
+
     .items-share .items-wrap .row-item { padding-bottom: 0; border: none;
         .convert-item{width: 100% !important; margin: 0 !important;
             .item { float: none; max-width: none; width: 100%; margin-bottom: 38px;
@@ -112,7 +112,7 @@
             }
         }
     }
-    
+
     .contact-form .conteiner-form{
         .title-row {font-size: 45px;margin-right: -20px; line-height: 52px;}
         .subtitle-row {font-size: 30px; line-height: 36px; margin-right: -10px; padding-bottom: 0px;}
@@ -150,18 +150,18 @@
     }
     .tools { background-color: White !important; padding-bottom: 0;
         &:after{display: none;}
-        .page-section { margin: 0 -40px; width: calc(100% + 80px); 
-            .conteiner{ display: block; padding-top: 150px; 
+        .page-section { margin: 0 -40px; width: calc(100% + 80px);
+            .conteiner{ display: block; padding-top: 150px;
                 .splash-left{width: 100%; padding: 0 35px; display: block; padding-bottom: 55px;
                     h3{font-size: 50px; color: rgb(40, 42, 43);  text-transform: uppercase;     max-width: none;}
                     p{font-size: 30px; color: rgb(40, 42, 43); line-height: 1.2; max-width: none;}
                 }
                 .splash-right{width: 100%; display: block;}
-            } 
+            }
         }
     }
     .tool-second.tools .page-section .conteiner{padding-top: 75px; }
-    
+
     .team-second .page-section .conteiner-worker { padding:0;
         .single-worker { width: 100%;
             .naming{ padding-top: 19px;
@@ -177,19 +177,19 @@
                     img{width: 100%;}
                 }
             }
-        }    
+        }
     }
-    
+
     .contacts-first {height: 1130px;
         .contacts-first-main { padding-top: 145px; padding-left: 0; margin-top: 0px;}
-        
+
         .page-section .index-first-top {
-            .index-logo { display: block; margin-top: -13px;}
-            .index-page {left: -40px; top: 200px; width: 300px; height: 135px; 
+            .index-logo { display: block; margin-top: -13px;display: none;}
+            .index-page {left: -40px; top: 200px; width: 300px; height: 135px;
                 .conteiner{font-size: 75px; padding-bottom: 27px;}
             }
         }
-        
+
         .page-section .text-block-wrap .text-block-main{
             .text-block {
                 h1 {line-height: 60px; font-size: 50px;}
@@ -197,13 +197,13 @@
             }
             .contacts-tsble { padding-top: 55px; position: relative;
                 &:before{content: ''; position: absolute; left: 0; right: 0; top: 55%; height: 1px; background-color: rgba(255, 255, 255, 0.2); }
-                .side {min-width: none; width: 100%; 
+                .side {min-width: none; width: 100%;
                     &:first-child{margin-bottom: 108px;}
                     p {font-size: 30px; padding-bottom: 15px;}
                     a {font-size: 25px;}
                 }
             }
-        } 
+        }
     }
     .index-contact-top .page-section { height: auto;
         .convert { padding-top: 50px;

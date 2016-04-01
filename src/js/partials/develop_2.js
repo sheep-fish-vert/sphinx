@@ -5,6 +5,7 @@ try {
             var myOptions = {
                 zoom: 16,
                 center: myLatlng,
+                scrollwheel: false,
                 disableDefaultUI: false, //без управляющих елементов
                 mapTypeId: google.maps.MapTypeId.ROADMAP, // SATELLITE - снимки со спутника,
                 zoomControlOptions: {
@@ -98,7 +99,7 @@ try {
         if ($('#formap').length) {
             googleMap('formap');
         };
-        
+
 
     });
 

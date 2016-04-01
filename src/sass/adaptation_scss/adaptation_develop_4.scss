@@ -1,5 +1,24 @@
-@media screen and (max-width: 1920px){
+@media screen and (min-width: 1900px){
+    .wrapper-main{overflow: hidden;height: 100vh;}
+    .index-main{backface-visibility: hidden;
+        .index-contact{display: flex;flex-wrap: nowrap;flex-direction: column;justify-content: space-between;
+            .index-contact-top{padding-top: 50px;}
+            #formap{height: 500px;}
+        }
+        .index-contact-bottom{display: flex;flex-wrap: nowrap;flex-direction: column;justify-content: flex-end;background-color: #282a2b;
+            .contact-form{padding-bottom: 164px;}
+        }
+    }
+    .index-contact,.index-contact-bottom{min-height: 100vh;max-height: 1080px;}
 
+    /*fix for ie*/
+    .its-fcking-ie{
+        .main-one-height,.index-first-block{height: 100vh;max-height: auto;}
+        .index-main .index-contact,.index-contact, .index-contact-bottom{height: 100vh;max-height: auto;}
+    }
+}
+@media screen and (min-width: 1367px){
+    .index-second-block,.index-third-block,.index-fourth-block,.index-fifth-block,.index-sixth-block{padding-top: 30px;padding-bottom: 30px;}
 }
 @media screen and (max-width: 1600px){
 
@@ -102,7 +121,7 @@
 }
 @media screen and (max-width: 1024px){
 
-    .index-contact{max-height: 100%;}
+    .index-contact,.index-contact-bottom{max-height: 100%;}
 
     /*main many pages*/
     //2-------------------
