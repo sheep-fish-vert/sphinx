@@ -188,8 +188,6 @@ function popNext(popupId, popupWrap){
 
 }
 
-
-
 /*маска на инпуте*/
 function Maskedinput(){
     if($('.tel-mask')){
@@ -211,6 +209,7 @@ function fancyboxForm(){
 }
 
 $(document).ready(function(){
+
     validate('#call-popup .contact-form', { submitFunction: validationCall });
 
     validate('.zayavka-on-main', { submitFunction: validationCall });
