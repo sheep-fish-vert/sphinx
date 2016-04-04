@@ -9,11 +9,11 @@ try{
                 sect = $('.index-main>section'),
                 timer = 0;
             sect.eq(indx).addClass('active');
-
+            var touchDetect = 'ontouchstart' in window;
             $(document).unbind('mousewheel DOMMouseScroll').on('mousewheel DOMMouseScroll', function(event) {
                 var delta = event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0 ? 1 : -1;
 
-                if( $(window).width() >= 1900 && $(window).height() > 750){
+                if( $(window).width() >= 1900 && $(window).height() > 750 && !touchDetect){
                     if( timer == 1 ){
                         event.preventDefault();
                     }else{
@@ -42,6 +42,50 @@ try{
                     }
                 }
             });
+
+            if( device.ios() && device.desktop() ){
+                console.log('has ios');
+                var touchStart = 0;
+                var touchEnd = 0;
+                $(window).on('touchstart', function(event) {
+                    touchStart = event.originalEvent.changedTouches[0].pageY;
+
+                    console.log('touchStart ' , touchStart);
+                    if( timer == 1 ){
+                        event.preventDefault();
+                    }
+                });
+                $(window).on('touchend', function(event) {
+                    touchEnd = event.originalEvent.changedTouches[0].pageY;
+                    console.log('touchEnd ' , touchEnd);
+                    if(touchStart > touchEnd && indx != (sect.length - 1)){
+                        console.log('touch Bottom');
+                        sect.removeClass('active');
+                        event.preventDefault();
+                        timer = 1;
+                        indx++;
+                        $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
+                        setTimeout(function(){
+                            timer = 0;
+                            sect.eq(indx).addClass('active');
+                        } ,400)
+                    }
+                    else if(touchStart < touchEnd && indx!=0 ){
+                        console.log('touch Up');
+                        sect.removeClass('active');
+                        event.preventDefault();
+                        timer = 1;
+                        indx--;
+                        $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
+                        setTimeout(function(){
+                            timer = 0;
+                            sect.eq(indx).addClass('active');
+                        } ,400)
+                    }
+                });
+            }
+
+
 
             $('.index-main .btn,.index-main .button').on('click', function(event) {
                 var count = 0
