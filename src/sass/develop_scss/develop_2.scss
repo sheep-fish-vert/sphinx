@@ -267,3 +267,14 @@
 .index-first-block.akcii-first {min-height: 595px; background-image: url(../images/akcii-h1.jpg);
     .page-section{min-height: 595px;   }
 }
+
+//call-success
+
+.call-success{width: 300px; height: 280px; display: flex; align-content: center; align-items: center; justify-content: space-around; background-color: #cf3428;
+    .imr img{margin: 0 auto; display: block;}
+    .call-title{font-size: 28px; text-align: center; padding-bottom: 10px; text-transform: uppercase; padding-top: 15px; color: white;}
+    .call-subtitle{font-size: 18px;text-align: center; color: white;}
+}
+.fancybox-form{
+    .fancybox-skin{ background: #cf3428; }
+}

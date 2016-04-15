@@ -65,8 +65,35 @@ try {
 
     $(document).ready(function() {
 
-        $("#datepicker").datepicker({
+        $("#datepicker1").datepicker({
+            defaultDate: "+1d",
             minDate: 0,
+            onClose: function (selectedDate) {
+                $("#datepicker2").datepicker("option", "minDate", selectedDate);
+            },            
+            showOtherMonths: true,
+            closeText: "Закрыть",
+            prevText: "&#x3C;Пред",
+            nextText: "След&#x3E;",
+            currentText: "Сегодня",
+            monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+                "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+            monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн",
+                "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+            dayNames: ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"],
+            dayNamesShort: ["вск", "пнд", "втр", "срд", "чтв", "птн", "сбт"],
+            dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+            weekHeader: "Нед",
+            dateFormat: "dd.mm.yy",
+            firstDay: 1,
+            isRTL: false
+        });
+        $("#datepicker2").datepicker({
+            defaultDate: "+1d",
+            minDate: 0,
+            onClose: function (selectedDate) {
+                $("#datepicker1").datepicker("option", "maxDate", selectedDate);
+            },
             showOtherMonths: true,
             closeText: "Закрыть",
             prevText: "&#x3C;Пред",
