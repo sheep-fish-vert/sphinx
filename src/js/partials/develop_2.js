@@ -68,9 +68,9 @@ try {
         $("#datepicker1").datepicker({
             defaultDate: "+1d",
             minDate: 0,
-            onClose: function (selectedDate) {
+          /*  onClose: function (selectedDate) {
                 $("#datepicker2").datepicker("option", "minDate", selectedDate);
-            },            
+            },   */         
             showOtherMonths: true,
             closeText: "Закрыть",
             prevText: "&#x3C;Пред",
@@ -88,6 +88,7 @@ try {
             firstDay: 1,
             isRTL: false
         });
+/*
         $("#datepicker2").datepicker({
             defaultDate: "+1d",
             minDate: 0,
@@ -110,6 +111,12 @@ try {
             dateFormat: "dd.mm.yy",
             firstDay: 1,
             isRTL: false
+        });
+*/
+
+        $('#datepicker2').timepicker({
+            'minTime': '8:00',
+            'maxTime': '17:30',
         });
 
         $("a.grouped_elements").fancybox({
