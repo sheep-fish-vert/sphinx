@@ -9,7 +9,7 @@ try{
                 sect = $('.index-main>section'),
                 timer = 0;
             sect.eq(indx).addClass('active');
-            var touchDetect = 'ontouchstart' in window;
+            var touchDetect = navigator.appVersion.indexOf("Mac")!=-1;
             $(document).unbind('mousewheel DOMMouseScroll').on('mousewheel DOMMouseScroll', function(event) {
                 var delta = event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0 ? 1 : -1;
 
@@ -43,46 +43,45 @@ try{
                 }
             });
 
-            if( device.ios() && device.desktop() ){
-                console.log('has ios');
-                var touchStart = 0;
-                var touchEnd = 0;
-                $(window).on('touchstart', function(event) {
-                    touchStart = event.originalEvent.changedTouches[0].pageY;
+            if( touchDetect && device.desktop() ){
+                 var indicator = new WheelIndicator({
+                    elem: document,
+                    callback: function(e){
+                        console.log(e.direction);
+                        var delta = e.direction;
+                        
+                        if( $(window).width() >= 1900 && $(window).height() ){
+                            if( timer == 1 ){
+                                event.preventDefault();
+                            }else{
+                                if( delta == 'down' && indx != (sect.length - 1) ){
+                                    sect.removeClass('active');
+                                    event.preventDefault();
+                                    timer = 1;
+                                    indx++;
+                                    $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
+                                    setTimeout(function(){
+                                        timer = 0;
+                                        sect.eq(indx).addClass('active');
+                                    } ,400)
 
-                    console.log('touchStart ' , touchStart);
-                    if( timer == 1 ){
-                        event.preventDefault();
+                                }else if( delta == 'up' && indx!=0 ){
+                                    sect.removeClass('active');
+                                    event.preventDefault();
+                                    timer = 1;
+                                    indx--;
+                                    $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
+                                    setTimeout(function(){
+                                        timer = 0;
+                                        sect.eq(indx).addClass('active');
+                                    } ,400)
+                                }
+                            }
+                        }
+   
                     }
-                });
-                $(window).on('touchend', function(event) {
-                    touchEnd = event.originalEvent.changedTouches[0].pageY;
-                    console.log('touchEnd ' , touchEnd);
-                    if(touchStart > touchEnd && indx != (sect.length - 1)){
-                        console.log('touch Bottom');
-                        sect.removeClass('active');
-                        event.preventDefault();
-                        timer = 1;
-                        indx++;
-                        $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
-                        setTimeout(function(){
-                            timer = 0;
-                            sect.eq(indx).addClass('active');
-                        } ,400)
-                    }
-                    else if(touchStart < touchEnd && indx!=0 ){
-                        console.log('touch Up');
-                        sect.removeClass('active');
-                        event.preventDefault();
-                        timer = 1;
-                        indx--;
-                        $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
-                        setTimeout(function(){
-                            timer = 0;
-                            sect.eq(indx).addClass('active');
-                        } ,400)
-                    }
-                });
+                });           
+                
             }
 
 
