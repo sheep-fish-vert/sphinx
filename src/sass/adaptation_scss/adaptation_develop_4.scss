@@ -1,6 +1,7 @@
 @media screen and (min-width: 1900px){
-    .wrapper-main{overflow: hidden;height: 100vh;}
-    .index-main{backface-visibility: hidden;
+    body.overflow-main{overflow: hidden;}
+    .wrapper-main{height: 100vh;position: relative;}
+    .index-main{backface-visibility: hidden;left: 0;width: 100%;position: absolute;
         .index-contact{display: flex;flex-wrap: nowrap;flex-direction: column;justify-content: space-between;
             .index-contact-top{padding-top: 50px;}
             #formap{height: 500px;}
@@ -9,6 +10,7 @@
             .contact-form{padding-bottom: 164px;}
         }
     }
+    .index-second-block,.index-third-block,.index-fourth-block,.index-fifth-block,.index-sixth-block{height: 100vh;}
     .index-contact,.index-contact-bottom{min-height: 100vh;max-height: 1080px;}
 
     /*fix for ie*/

@@ -10,6 +10,31 @@ try{
                 timer = 0;
             sect.eq(indx).addClass('active');
             var touchDetect = navigator.appVersion.indexOf("Mac")!=-1;
+
+            if( scroller ){
+                $('body').addClass('overflow-main');
+            }
+            if( window.location.hash =='#form' && indx != 7){
+                sect.removeClass('active');
+                indx = 7;
+                $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
+                setTimeout(function(){
+                    timer = 0;
+                    sect.eq(indx).addClass('active');
+                } ,400)
+            }
+
+            if( window.location.hash =='#services' && indx != 1){
+                window.location.hash ='';
+                sect.removeClass('active');
+                indx = 1;
+                $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
+                setTimeout(function(){
+                    timer = 0;
+                    sect.eq(indx).addClass('active');
+                } ,400)
+            }
+
             $(document).unbind('mousewheel DOMMouseScroll').on('mousewheel DOMMouseScroll', function(event) {
                 window.location.hash='';
                 var delta = event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0 ? 1 : -1;
@@ -18,6 +43,9 @@ try{
                     if( timer == 1 ){
                         event.preventDefault();
                     }else{
+                        if( !$('.index-main').is('trans') ){
+                            $('.index-main').addClass('trans');
+                        }
                         if( delta < 0 && indx != (sect.length - 1) ){
                             sect.removeClass('active');
                             event.preventDefault();
@@ -88,6 +116,7 @@ try{
             }
 
             if( $(window).width() >= 1900 && $(window).height() > 750){
+
                 $('.menu-item-72').click(function(e){
                     e.preventDefault();
                     sect.removeClass('active');

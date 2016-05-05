@@ -20,7 +20,8 @@ $red:#cf3428;
 /*some main style*/
 .index-second-block,.index-third-block,.index-fourth-block,.index-fifth-block,.index-sixth-block,.index-contact,.index-contact-bottom{overflow: hidden;}
 
-.index-main{position: relative;transition:top ease .3s;top: 0px;}
+.index-main{position: relative;top: 0px;}
+.index-main.trans{transition:top ease .3s;}
 
 .wrapper-main{
     .footer{position: relative;}
