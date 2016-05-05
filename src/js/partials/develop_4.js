@@ -11,6 +11,7 @@ try{
             sect.eq(indx).addClass('active');
             var touchDetect = navigator.appVersion.indexOf("Mac")!=-1;
             $(document).unbind('mousewheel DOMMouseScroll').on('mousewheel DOMMouseScroll', function(event) {
+                window.location.hash='';
                 var delta = event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0 ? 1 : -1;
 
                 if( $(window).width() >= 1900 && $(window).height() > 750 && !touchDetect){
@@ -26,6 +27,8 @@ try{
                             setTimeout(function(){
                                 timer = 0;
                                 sect.eq(indx).addClass('active');
+
+                                console.log('indx ' , indx);
                             } ,400)
 
                         }else if( delta > 0 && indx!=0 ){
@@ -49,7 +52,7 @@ try{
                     callback: function(e){
                         console.log(e.direction);
                         var delta = e.direction;
-                        
+
                         if( $(window).width() >= 1900 && $(window).height() ){
                             if( timer == 1 ){
                                 event.preventDefault();
@@ -78,12 +81,40 @@ try{
                                 }
                             }
                         }
-   
+
                     }
-                });           
-                
+                });
+
             }
 
+            if( $(window).width() >= 1900 && $(window).height() > 750){
+                $('.menu-item-72').click(function(e){
+                    e.preventDefault();
+                    sect.removeClass('active');
+                    event.preventDefault();
+                    timer = 1;
+                    indx = 7;
+                    $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
+                    setTimeout(function(){
+                        timer = 0;
+                        sect.eq(indx).addClass('active');
+                        window.location.hash='#form';
+                    } ,400)
+                });
+                $('.menu-item-70').click(function(e){
+                    e.preventDefault();
+                    sect.removeClass('active');
+                    event.preventDefault();
+                    timer = 1;
+                    indx = 1;
+                    $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
+                    setTimeout(function(){
+                        timer = 0;
+                        sect.eq(indx).addClass('active');
+                        window.location.hash='#services';
+                    } ,400)
+                });
+            }
 
 
             $('.index-main .btn,.index-main .button').on('click', function(event) {
