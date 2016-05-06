@@ -85,6 +85,9 @@ try{
                             if( timer == 1 ){
                                 event.preventDefault();
                             }else{
+                                if( !$('.index-main').is('trans') ){
+                                    $('.index-main').addClass('trans');
+                                }
                                 if( delta == 'down' && indx != (sect.length - 1) ){
                                     sect.removeClass('active');
                                     event.preventDefault();
