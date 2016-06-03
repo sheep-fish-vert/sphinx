@@ -1,7 +1,10 @@
 try{
+
+
     function scrollMainPage(){
 
         function scroll(){
+
 
             var scroller='.index-main';
             var scrollPos = $(window).scrollTop(),
@@ -21,7 +24,7 @@ try{
                 setTimeout(function(){
                     timer = 0;
                     sect.eq(indx).addClass('active');
-                } ,400)
+                } ,400);
             }
 
             if( window.location.hash =='#services' && indx != 1){
@@ -32,7 +35,7 @@ try{
                 setTimeout(function(){
                     timer = 0;
                     sect.eq(indx).addClass('active');
-                } ,400)
+                } ,400);
             }
 
             $(document).unbind('mousewheel DOMMouseScroll').on('mousewheel DOMMouseScroll', function(event) {
@@ -57,7 +60,7 @@ try{
                                 sect.eq(indx).addClass('active');
 
                                 console.log('indx ' , indx);
-                            } ,400)
+                            } ,400);
 
                         }else if( delta > 0 && indx!=0 ){
                             sect.removeClass('active');
@@ -68,14 +71,33 @@ try{
                             setTimeout(function(){
                                 timer = 0;
                                 sect.eq(indx).addClass('active');
-                            } ,400)
+                            } ,400);
                         }
                     }
                 }
             });
 
             if( touchDetect && device.desktop() ){
-                 var indicator = new WheelIndicator({
+                if( $(window).width() >= 1900){
+                    macScroll();
+                }
+            }
+            $(window).resize(function(event) {
+                if( touchDetect && device.desktop() ){
+                    if( $(window).width() >= 1900){
+                        macScroll();
+                    }else{
+                        indicator.turnOff();
+                    }
+                }
+            });
+
+            var indicator;
+
+            function macScroll(){
+                    $(window).scrollTop(0);
+
+                    indicator = new WheelIndicator({
                     elem: document,
                     callback: function(e){
                         console.log(e.direction);
@@ -97,9 +119,9 @@ try{
                                     setTimeout(function(){
                                         timer = 0;
                                         sect.eq(indx).addClass('active');
-                                    } ,400)
+                                    } ,400);
 
-                                }else if( delta == 'up' && indx!=0 ){
+                                }else if( delta == 'up' && indx != 0 ){
                                     sect.removeClass('active');
                                     event.preventDefault();
                                     timer = 1;
@@ -108,15 +130,15 @@ try{
                                     setTimeout(function(){
                                         timer = 0;
                                         sect.eq(indx).addClass('active');
-                                    } ,400)
+                                    } ,400);
                                 }
                             }
                         }
 
                     }
                 });
-
             }
+
 
             if( $(window).width() >= 1900 && $(window).height() > 750){
 
@@ -131,7 +153,7 @@ try{
                         timer = 0;
                         sect.eq(indx).addClass('active');
                         window.location.hash='#form';
-                    } ,400)
+                    } ,400);
                 });
                 $('.menu-item-70').click(function(e){
                     e.preventDefault();
@@ -144,15 +166,15 @@ try{
                         timer = 0;
                         sect.eq(indx).addClass('active');
                         window.location.hash='#services';
-                    } ,400)
+                    } ,400);
                 });
             }
 
 
             $('.index-main .btn,.index-main .button').on('click', function(event) {
-                var count = 0
+                var count = 0;
                 if($(window).width()<=641){
-                    count = 174
+                    count = 174;
                 }
                 if( $(window).width() >= 1900 && $(window).height() > 750){
                     sect.removeClass('active');
@@ -184,12 +206,19 @@ try{
     }
     $(document).ready(function(){
         checkBrowser();
+
+
+
     });
 
     $(window).load(function(){
         if ( $('.index-main').length ) {
-            scrollMainPage();
-        }
+            document.documentElement.classList.remove('lock_body');
+            setTimeout(function(){
+                scrollMainPage();
+            },100);
+
+        };
 
     });
 

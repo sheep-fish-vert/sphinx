@@ -1,4 +1,5 @@
 @media screen and (min-width: 1900px){
+
     body.overflow-main{overflow: hidden;}
     .wrapper-main{height: 100vh;position: relative;}
     .index-main{backface-visibility: hidden;left: 0;width: 100%;position: absolute;
@@ -18,6 +19,8 @@
         .main-one-height,.index-first-block{height: 100vh;max-height: auto;}
         .index-main .index-contact,.index-contact, .index-contact-bottom{height: 100vh;max-height: auto;}
     }
+
+
 }
 @media screen and (min-width: 1367px){
     .index-second-block,.index-third-block,.index-fourth-block,.index-fifth-block,.index-sixth-block{padding-top: 30px;padding-bottom: 30px;}
