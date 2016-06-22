@@ -1,11 +1,13 @@
 try{
-
+    jQuery.browser = {};
+    jQuery.browser.mozilla = /mozilla/.test(navigator.userAgent.toLowerCase()) && !/webkit/.test(navigator.userAgent.toLowerCase());
+    jQuery.browser.webkit = /webkit/.test(navigator.userAgent.toLowerCase());
+    jQuery.browser.opera = /opera/.test(navigator.userAgent.toLowerCase());
+    jQuery.browser.msie = /msie/.test(navigator.userAgent.toLowerCase());
 
     function scrollMainPage(){
 
         function scroll(){
-
-
             var scroller='.index-main';
             var scrollPos = $(window).scrollTop(),
                 indx = 0,
@@ -38,52 +40,57 @@ try{
                 } ,400);
             }
 
-            $(document).unbind('mousewheel DOMMouseScroll').on('mousewheel DOMMouseScroll', function(event) {
-                window.location.hash='';
-                var delta = event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0 ? 1 : -1;
+            $(document).on('mousewheel DOMMouseScroll', function(event) {
+                if( !jQuery.browser.mozilla ) {
+                    window.location.hash='';
+                    var delta = event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0 ? 1 : -1;
 
-                if( $(window).width() >= 1900 && $(window).height() > 750 && !touchDetect){
-                    if( timer == 1 ){
-                        event.preventDefault();
-                    }else{
-                        if( !$('.index-main').is('trans') ){
-                            $('.index-main').addClass('trans');
-                        }
-                        if( delta < 0 && indx != (sect.length - 1) ){
-                            sect.removeClass('active');
+                    if( $(window).width() >= 1900 && $(window).height() > 750 && !touchDetect){
+                        console.log(delta);
+                        if( timer == 1 ){
                             event.preventDefault();
-                            timer = 1;
-                            indx++;
-                            $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
-                            setTimeout(function(){
-                                timer = 0;
-                                sect.eq(indx).addClass('active');
+                            console.log('event.preventDefault();');
+                        }else{
+                            if( !$('.index-main').is('trans') ){
+                                $('.index-main').addClass('trans');
+                            }
+                            if( delta < 0 && indx != (sect.length - 1) ){
+                                console.log('delta < 0');
+                                sect.removeClass('active');
+                                event.preventDefault();
+                                timer = 1;
+                                indx++;
+                                $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
+                                setTimeout(function(){
+                                    timer = 0;
+                                    sect.eq(indx).addClass('active');
 
-                                console.log('indx ' , indx);
-                            } ,400);
+                                    console.log('indx ' , indx);
+                                } ,400);
 
-                        }else if( delta > 0 && indx!=0 ){
-                            sect.removeClass('active');
-                            event.preventDefault();
-                            timer = 1;
-                            indx--;
-                            $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
-                            setTimeout(function(){
-                                timer = 0;
-                                sect.eq(indx).addClass('active');
-                            } ,400);
+                            }else if( delta > 0 && indx!=0 ){
+                                sect.removeClass('active');
+                                event.preventDefault();
+                                timer = 1;
+                                indx--;
+                                $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
+                                setTimeout(function(){
+                                    timer = 0;
+                                    sect.eq(indx).addClass('active');
+                                } ,400);
+                            }
                         }
                     }
                 }
             });
 
-            if( touchDetect && device.desktop() ){
+            if( touchDetect && device.desktop() || jQuery.browser.mozilla && device.desktop() ){
                 if( $(window).width() >= 1900){
                     macScroll();
                 }
             }
             $(window).resize(function(event) {
-                if( touchDetect && device.desktop() ){
+                if( touchDetect && device.desktop() || jQuery.browser.mozilla && device.desktop() ){
                     if( $(window).width() >= 1900){
                         macScroll();
                     }else{
@@ -105,14 +112,14 @@ try{
 
                         if( $(window).width() >= 1900 && $(window).height() ){
                             if( timer == 1 ){
-                                event.preventDefault();
+                                //event.preventDefault();
                             }else{
                                 if( !$('.index-main').is('trans') ){
                                     $('.index-main').addClass('trans');
                                 }
                                 if( delta == 'down' && indx != (sect.length - 1) ){
                                     sect.removeClass('active');
-                                    event.preventDefault();
+                                    //event.preventDefault();
                                     timer = 1;
                                     indx++;
                                     $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
@@ -123,7 +130,7 @@ try{
 
                                 }else if( delta == 'up' && indx != 0 ){
                                     sect.removeClass('active');
-                                    event.preventDefault();
+                                    //event.preventDefault();
                                     timer = 1;
                                     indx--;
                                     $(scroller).css('top', "-"+sect.eq(indx).position().top+"px");
@@ -206,9 +213,6 @@ try{
     }
     $(document).ready(function(){
         checkBrowser();
-
-
-
     });
 
     $(window).load(function(){
